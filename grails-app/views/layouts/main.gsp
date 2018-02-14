@@ -29,7 +29,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
                     class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
                     class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="index.html"><img src="${assetPath(src: 'church-logo.png')}" alt="church logo"
+            <a class="navbar-brand" href="${createLink(uri: '/')}"><img src="${assetPath(src: 'church-logo.png')}" alt="church logo"
                                                            class="img-responsive"></a></div>
 
         <div class="navbar-collapse collapse">

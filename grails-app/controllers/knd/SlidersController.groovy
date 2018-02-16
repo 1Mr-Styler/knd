@@ -4,9 +4,18 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile
 
 class SlidersController {
 
-    def index() {}
+    def index() {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+        }
+    }
 
     def save() {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+            return
+        }
+
         if (params.bg) {
             def bg = params.bg as CommonsMultipartFile
             new FileOutputStream(

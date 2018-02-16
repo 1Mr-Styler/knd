@@ -39,8 +39,8 @@
                                     class="glyphicon glyphicon-bookmark"></span> <br/>Edit</a>
                             <a href="#" class="btn btn-info btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-signal"></span> <br/>Delete</a>
-                            <a href="#" class="btn btn-success btn-lg" role="button" style="font-size: 14px"><span
-                                    class="glyphicon glyphicon-comment"></span> <br/>Gallery</a>
+                            <a href="${createLink(controller: 'staff')}" class="btn btn-success btn-lg" role="button" style="font-size: 14px"><span
+                                    class="glyphicon glyphicon-comment"></span> <br/>Menu</a>
                         </div>
                     </div>
                 </div>

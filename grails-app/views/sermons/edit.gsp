@@ -48,11 +48,12 @@
         </div>
 
         <div class="col-md-10">
-            <form class="form-horizontal" action="save" enctype="multipart/form-data" method="post">
+            <form class="form-horizontal" action="${createLink(controller: 'sermons', action: 'update')}" enctype="multipart/form-data" method="post">
                 <fieldset>
 
                     <!-- Form Name -->
                     <legend>Upload Sermon</legend>
+                    <input value="${sermon.id}" type="hidden"/>
 
                     <!-- Text input-->
                     <div class="form-group">
@@ -60,7 +61,8 @@
 
                         <div class="col-md-5">
                             <input id="title" name="title" placeholder="Short and descriptive"
-                                   class="form-control input-md" required="" type="text" autocomplete="off">
+                                   class="form-control input-md" required="" type="text" autocomplete="off"
+                                   value="${sermon.title}">
 
                         </div>
                     </div>
@@ -70,7 +72,7 @@
                         <label class="col-md-4 control-label" for="desc">Description</label>
 
                         <div class="col-md-4">
-                            <textarea class="form-control" id="desc" name="desc" placeholder="Short note"></textarea>
+                            <textarea class="form-control" id="desc" name="desc" placeholder="Short note">${sermon.note}</textarea>
                         </div>
                     </div>
 
@@ -81,7 +83,7 @@
 
                         <div class="col-md-5">
                             <input id="author" name="author" placeholder="Main Preacher"
-                                   class="form-control input-md" required="" type="text">
+                                   class="form-control input-md" required="" type="text" value="${sermon.author}">
 
                         </div>
                     </div>
@@ -92,7 +94,7 @@
 
                         <div class="col-md-5">
                             <input id="length" name="length" placeholder="30:15 mins"
-                                   class="form-control input-md" required="" type="text">
+                                   class="form-control input-md" required="" type="text" value="${sermon.length}">
 
                         </div>
                     </div>
@@ -103,28 +105,18 @@
 
                         <div class="col-md-5">
                             <input id="date" name="datec" placeholder="dd/mm/yyyy"
-                                   class="form-control input-md" required="" type="text">
+                                   class="form-control input-md" required="" type="text" value="${sermon.date}">
 
                         </div>
                     </div>
 
-                    <!-- File Button -->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="audio"></label>
-
-                        <div class="col-md-4">
-                            <input id="audio" name="audio" class="input-file" type="file">
-                            <p class="help-block">Select audio file to upload</p>
-                        </div>
-
-                    </div>
 
                     <!-- Button -->
                     <div class="form-group">
                         <label class="col-md-4 control-label" for=""></label>
 
                         <div class="col-md-4">
-                            <button id="" name="" class="btn btn-primary">Save</button>
+                            <button id="" name="" class="btn btn-primary">Update</button>
                         </div>
                     </div>
 

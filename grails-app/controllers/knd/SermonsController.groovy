@@ -39,4 +39,64 @@ class SermonsController {
         flash.message = "Added Slide!"
         render view: 'index'
     }
+
+    def list() {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+        }
+
+        render(view: 'list', model: [sermons: Sermons.list(params)])
+    }
+
+    def delete(Sermons sermon) {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+        }
+
+        if (sermon != null) {
+            flash.message = "Deleted " + sermon.title
+            new File('/Users/mac/IdeaProjects/KND/grails-app/assets/audio/' + sermon.fname).delete()
+            sermon.delete(flush: true)
+        } else {
+            flash.message = "Invalid ID"
+        }
+
+        render(view: 'list', model: [sermons: Sermons.list(params)])
+
+    }
+
+    def edit(Sermons sermon) {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+        }
+
+        if (sermon != null) {
+            render(view: 'edit', model: [sermon: sermon])
+            return
+        }
+
+        render "invalid ID"
+    }
+
+    def update() {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+        }
+
+        if (params.id != null) {
+            def sermon = Sermons.findWhere(id: params.long('id'))
+
+            sermon.title = params.title
+            sermon.note = params.desc
+            sermon.author = params.author
+            sermon.length = params.length
+            sermon.date = params.date
+
+            sermon.save(flush: true)
+
+            flash.message = "Record Updated!"
+        } else flash.message = "Update failed!"
+
+        render(view: 'index')
+    }
 }

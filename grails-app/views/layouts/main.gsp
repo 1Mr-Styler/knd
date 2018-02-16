@@ -78,10 +78,9 @@
             <div class="col-sm-6 col-md-3">
                 <h5>QUICK LINKS</h5>
                 <ul class="footer-links">
-                    <li><a href="index.html#">Upcoming events</a></li>
-                    <li><a href="index.html#">Ministries</a></li>
-                    <li><a href="index.html#">Recent Sermons</a></li>
-                    <li><a href="index.html#">Contact us</a></li>
+                    <li><a href="${createLink(controller: 'sermons')}">Sermons</a></li>
+                    <li><a href="${createLink(controller: 'events')}">Upcoming events</a></li>
+                    <li><a href="${createLink(uri: '/contact')}">Contact us</a></li>
                 </ul>
             </div>
 

@@ -5139,3 +5139,7 @@ n:2829:script151878853784527562389$_run_closure3_closure6
 n:3409:script151878853784527562389$_run_closure3_closure6_closure9
 n:4063:script151878853784527562389$_run_closure3_closure6_closure9_closure10
 n:2788:BuildConfig$_run_closure1_closure4
+n:2273:org/codehaus/groovy/grails/commons/GrailsApplication$isArtefactOfType
+n:2188:org/codehaus/groovy/grails/commons/GrailsApplication$addArtefact$0
+n:3917:org/codehaus/groovy/grails/plugins/web/GroovyPagesGrailsPlugin$_closure5_closure26
+n:2705:org/codehaus/groovy/grails/plugins/web/GroovyPagesGrailsPlugin$_closure5_closure26_closure27

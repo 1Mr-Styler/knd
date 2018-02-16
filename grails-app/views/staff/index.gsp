@@ -33,8 +33,8 @@
                             <a href="${createLink(controller: 'sliders')}" class="btn btn-danger btn-lg"
                                role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-list-alt"></span> <br/>Sliders</a>
-                            <a href="#" class="btn btn-warning btn-lg" role="button" style="font-size: 14px"><span
-                                    class="glyphicon glyphicon-bookmark"></span> <br/>Events</a>
+                            <a href="${createLink(controller: 'sermons')}" class="btn btn-warning btn-lg" role="button" style="font-size: 14px"><span
+                                    class="glyphicon glyphicon-bookmark"></span> <br/>Sermons</a>
                             <a href="#" class="btn btn-info btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-signal"></span> <br/>Bulletins</a>
                             <a href="#" class="btn btn-success btn-lg" role="button" style="font-size: 14px"><span
@@ -48,8 +48,8 @@
                                     class="glyphicon glyphicon-file"></span> <br/>Sermons</a>
                             <a href="#" class="btn btn-primary btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-picture"></span> <br/>Photos</a>
-                            <a href="#" class="btn btn-danger btn-lg" role="button" style="font-size: 14px"><span
-                                    class="glyphicon glyphicon-tag"></span> <br/>Tags</a>
+                            <a href="${createLink(action: 'logout')}" class="btn btn-danger btn-lg" role="button" style="font-size: 14px"><span
+                                    class="glyphicon glyphicon-tag"></span> <br/>Logout</a>
                         </div>
                     </div>
                     <a href="${createLink(uri: '/')}" target="_blank" class="btn btn-success btn-lg btn-block" role="button"><span

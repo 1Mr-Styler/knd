@@ -30,7 +30,8 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-xs-6 col-md-6">
-                            <a href="#" class="btn btn-danger btn-lg" role="button" style="font-size: 14px"><span
+                            <a href="${createLink(controller: 'sliders')}" class="btn btn-danger btn-lg"
+                               role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-list-alt"></span> <br/>Sliders</a>
                             <a href="#" class="btn btn-warning btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-bookmark"></span> <br/>Events</a>

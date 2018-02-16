@@ -74,13 +74,23 @@
                         </div>
                     </div>
 
-
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="title">Author</label>
+                        <label class="col-md-4 control-label" for="author">Author</label>
 
                         <div class="col-md-5">
                             <input id="author" name="author" placeholder="Main Preacher"
+                                   class="form-control input-md" required="" type="text">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="cat">Category</label>
+
+                        <div class="col-md-5">
+                            <input id="cat" name="cat" placeholder="eg. Finance, Health..."
                                    class="form-control input-md" required="" type="text">
 
                         </div>

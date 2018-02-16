@@ -18,7 +18,7 @@ class SermonsController {
             return
         }
 
-        def newdate = new Date().parse("dd/mm/yyyy", params.datec)
+        def newdate = new Date().parse("dd/MM/yyyy", params.datec)
 
 
         def audio = params.audio as CommonsMultipartFile
@@ -32,7 +32,8 @@ class SermonsController {
                 length: params.length,
                 author: params.author,
                 date: newdate,
-                fname: audio.originalFilename
+                fname: audio.originalFilename,
+                category: params.cat,
         ).save(flush: true)
 
 

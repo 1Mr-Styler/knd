@@ -95,7 +95,7 @@
                                     <td>${sermon.title}</td>
                                     <td>${sermon.author}</td>
                                     <td>${sermon.date}</td>
-                                    <td>Financial</td>
+                                    <td>${sermon.category}</td>
                                     <td>${sermon.length}</td>
                                 </tr>
                             </g:each>

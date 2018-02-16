@@ -8,6 +8,7 @@ class Sermons {
     Date date
     String length
     String fname
+    String category
 
     static constraints = {
     }

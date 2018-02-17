@@ -88,9 +88,9 @@
             <div class="col-sm-6 col-md-3">
                 <h5>OUR ADDRESS</h5>
 
-                <p>Catholic Church<br>
-                    121 King Street, Melbourne <br>
-                    Victoria 3000 Australia<br>
+                <p>Christ Gospel Church,<br>
+                    Samaru, Zaria<br>
+                    Nigeria.<br>
                     <br>
                     Phone: ${message(code: 'eni.site.phone')}<br>
                     Email: <a

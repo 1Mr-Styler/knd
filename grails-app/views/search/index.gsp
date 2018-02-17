@@ -40,7 +40,8 @@
                         <h4 class="media-heading">${sermon.title}<span class="badge pull-right">${sermon.category}</span></h4>
 
                         <p class="media-content">${sermon.note}</p>
-                        <a class="btn btn-primary" href="#" role="button">Download →</a></div>
+                        <a class="btn btn-primary"
+                           href="${createLink(controller: 'downloads')}/${sermon.id}" role="button">Download →</a></div>
                 </div>
                 <hr>
             </g:each>
@@ -70,20 +71,6 @@
                 </ol>
             </div>
 
-            <div class="well">
-                <h4>About</h4>
-
-                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet
-                fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div>
-
-            <div class="tag-cloud has-margin-bottom"><a href="events-programs.html#">catholic</a> <a
-                    href="events-programs.html#">bulletin</a> <a href="events-programs.html#">programs</a> <a
-                    href="events-programs.html#">events</a> <a href="events-programs.html#">church</a> <a
-                    href="events-programs.html#">charity</a> <a href="events-programs.html#">website</a> <a
-                    href="events-programs.html#">template</a> <a href="events-programs.html#">non-profit</a> <a
-                    href="events-programs.html#">belief</a> <a href="events-programs.html#">ministry</a> <a
-                    href="events-programs.html#">sermon</a> <a href="events-programs.html#">nature</a></div>
         </div>
     </div>
 </div>

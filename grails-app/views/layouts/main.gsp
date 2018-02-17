@@ -29,8 +29,9 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span
                     class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
                     class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="${createLink(uri: '/')}"><img src="${assetPath(src: 'church-logo.png')}" alt="church logo"
-                                                           class="img-responsive"></a></div>
+            <a class="navbar-brand" href="${createLink(uri: '/')}"><img src="${assetPath(src: 'church-logo.png')}"
+                                                                        alt="church logo"
+                                                                        class="img-responsive"></a></div>
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -39,21 +40,15 @@
                 </li>
                 <li><a></a>&nbsp;</li>
                 <li>
-                    <form action="${createLink(controller: 'search')}" method="GET">
-                        <div class="row">
-                            <div class="">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" name="search"
-                                           placeholder="Search Sermons" id="txtSearch"/>
-
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-primary" type="submit">
-                                            <span class="glyphicon glyphicon-search"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                    <form action="${createLink(controller: 'search')}"
+                          class="navbar-form navbar-left navbar-input-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="search"
+                                   placeholder="Search Sermons" id="txtSearch"/>
                         </div>
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
                     </form>
                 </li>
             </ul>
@@ -117,6 +112,22 @@
         </div>
     </div>
 </footer>
+<style>
+.navbar-input-group {
+    font-size: 0px; /*removes whitespace between button and input*/
+}
+
+.navbar-input-group input {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.navbar-input-group .btn {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0px;
+}
+</style>
 <asset:javascript src="application.js"/>
 </body>
 </html>

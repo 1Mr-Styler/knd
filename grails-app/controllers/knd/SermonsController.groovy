@@ -23,7 +23,7 @@ class SermonsController {
 
         def audio = params.audio as CommonsMultipartFile
         new FileOutputStream(
-                "/Users/mac/IdeaProjects/KND/grails-app/assets/audio/${audio.originalFilename}")
+                "/apps/contents/audio/${audio.originalFilename}")
                 .leftShift(params.audio.getInputStream())
 
         def sermon = new Sermons(
@@ -56,7 +56,7 @@ class SermonsController {
 
         if (sermon != null) {
             flash.message = "Deleted " + sermon.title
-            new File('/Users/mac/IdeaProjects/KND/grails-app/assets/audio/' + sermon.fname).delete()
+            new File('/apps/contents/audio/' + sermon.fname).delete()
             sermon.delete(flush: true)
         } else {
             flash.message = "Invalid ID"

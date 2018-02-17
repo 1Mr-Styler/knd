@@ -29,7 +29,7 @@ environments {
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://${ip}/knd_prod?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://localhost/knd_prod?useUnicode=yes&characterEncoding=UTF-8"
             username = "root"
             password = ""
         }
@@ -37,9 +37,9 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://${ip}/rose_prod?useUnicode=yes&characterEncoding=UTF-8"
+            url = "jdbc:mysql://localhost/knd_prod?useUnicode=yes&characterEncoding=UTF-8"
             username = "root"
-            password = "root"
+            password = "eni2020"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true

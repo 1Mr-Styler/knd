@@ -11,7 +11,7 @@ class DownloadsController {
             if (file) {
                 def d = Downloads.findOrSaveWhere(sermon: file.id)
 
-                def fileToDownload = new File("/Users/mac/IdeaProjects/KND/grails-app/assets/audio/${file.fname}")
+                def fileToDownload = new File("/apps/contents/audio/${file.fname}")
 
                 if (fileToDownload.exists()) {
                     d.downloads += 1

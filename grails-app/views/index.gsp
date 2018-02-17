@@ -52,7 +52,7 @@
                     <p class="media-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
                     egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris
                     quam. Lorem ipsum dolor sit amet...</p>
-                    <a class="btn btn-primary" href="blog-single.html" role="button">Read Article →</a></div>
+                    <a class="btn btn-primary" href="#" role="button">Read Article →</a></div>
             </div>
         </div>
 

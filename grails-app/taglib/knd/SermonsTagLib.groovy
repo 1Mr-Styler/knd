@@ -17,7 +17,7 @@ class SermonsTagLib {
                 break
 
             bod += """
-<a href="" class="list-group-item">
+<a href="${createLink(controller: 'downloads')}/${l[i].id}" class="list-group-item">
                     <p class="list-group-item-heading">${l[i].title}</p>
 
                     <p class="list-group-item-text">${l[i].length}</p>

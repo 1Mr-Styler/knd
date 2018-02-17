@@ -76,7 +76,8 @@
                 <ul class="footer-links">
                     <li><a href="${createLink(controller: 'search')}">Sermons</a></li>
                     <li><a href="${createLink(controller: 'events')}">Upcoming events</a></li>
-                    <li><a href="${createLink(uri: '/contact')}">Contact us</a></li>
+                    <li><a href="${createLink(url: 'https://www.facebook.com/koinoniaeni/')}"
+                           target="_blank">Contact us</a></li>
                 </ul>
             </div>
 

@@ -34,16 +34,17 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown active">
-                    <a href="${createLink(uri: '/')}" class="dropdown-toggle" data-toggle="dropdown">HOME</a>
+                <li class="active">
+                    <a href="${createLink(uri: '/')}">HOME</a>
                 </li>
                 <li><a></a>&nbsp;</li>
                 <li>
-                    <form action="/hms/accommodations" method="GET">
+                    <form action="${createLink(controller: 'search')}" method="GET">
                         <div class="row">
                             <div class="">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search Sermons" id="txtSearch"/>
+                                    <input type="text" class="form-control" name="search"
+                                           placeholder="Search Sermons" id="txtSearch"/>
 
                                     <div class="input-group-btn">
                                         <button class="btn btn-primary" type="submit">
@@ -78,7 +79,7 @@
             <div class="col-sm-6 col-md-3">
                 <h5>QUICK LINKS</h5>
                 <ul class="footer-links">
-                    <li><a href="${createLink(controller: 'sermons')}">Sermons</a></li>
+                    <li><a href="${createLink(controller: 'search')}">Sermons</a></li>
                     <li><a href="${createLink(controller: 'events')}">Upcoming events</a></li>
                     <li><a href="${createLink(uri: '/contact')}">Contact us</a></li>
                 </ul>

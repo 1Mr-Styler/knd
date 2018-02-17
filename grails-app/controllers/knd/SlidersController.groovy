@@ -19,7 +19,7 @@ class SlidersController {
         if (params.bg) {
             def bg = params.bg as CommonsMultipartFile
             new FileOutputStream(
-                    "/Users/mac/IdeaProjects/KND/grails-app/assets/images/bg/${bg.originalFilename}")
+                    "/apps/knd/grails-app/assets/images/bg/${bg.originalFilename}")
                     .leftShift(params.bg.getInputStream())
 
             def slider = Sliders.findOrSaveWhere(id: params.long('pos'))

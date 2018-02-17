@@ -42,7 +42,7 @@
                         </div>
 
                         <div class="col-xs-6 col-md-6">
-                            <a href="#" class="btn btn-success btn-lg" role="button"  style="font-size: 14px"><span
+                            <a href="${createLink(action: 'users')}" class="btn btn-success btn-lg" role="button"  style="font-size: 14px"><span
                                     class="glyphicon glyphicon-user"></span> <br/>Users</a>
                             <a href="#" class="btn btn-info btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-file"></span> <br/>Sermons</a>

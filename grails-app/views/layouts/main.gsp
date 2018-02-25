@@ -35,9 +35,9 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active">
+                %{--<li class="active">
                     <a href="${createLink(uri: '/')}">HOME</a>
-                </li>
+                </li>--}%
                 <li><a></a>&nbsp;</li>
                 <li>
                     <form action="${createLink(controller: 'search')}"

@@ -48,13 +48,7 @@
 
             <div class="text-center center-block">
                 <ul class="pagination">
-                    <li class="disabled"><a href="events-programs.html#">«</a></li>
-                    <li class="active"><a href="events-programs.html#">1 <span class="sr-only">(current)</span></a></li>
-                    <li><a href="events-programs.html#">2</a></li>
-                    <li><a href="events-programs.html#">3</a></li>
-                    <li><a href="events-programs.html#">4</a></li>
-                    <li><a href="events-programs.html#">5</a></li>
-                    <li><a href="events-programs.html#">»</a></li>
+                    <g:paginate total="${total}" controller="search" action="index" params="${params}"/>
                 </ul>
             </div>
         </div>

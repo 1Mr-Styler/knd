@@ -18,3 +18,4 @@ stacktrace.log
 .idea/
 .slcache/
 grails-app/assets/audio
+grails-app/controllers/knd/SlidersController.groovy

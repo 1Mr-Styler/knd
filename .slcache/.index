@@ -5158,3 +5158,5 @@ n:3155:script151888445663827562389$_run_closure3_closure5_closure8
 n:2829:script151888445663827562389$_run_closure3_closure6
 n:3409:script151888445663827562389$_run_closure3_closure6_closure9
 n:4063:script151888445663827562389$_run_closure3_closure6_closure9_closure10
+n:670:org/codehaus/groovy/runtime/dgm$325
+n:1887:org/codehaus/groovy/grails/cli/interactive/InteractiveMode$getCurrent

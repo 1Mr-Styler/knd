@@ -8,23 +8,28 @@ class SearchController {
         searchService.categories()
 
         if (params.category) {
+            def sermons = searchService.categories(params.category)
             render view: 'index', model: [
-                    'sermons'   : searchService.categories(params.category),
+                    'sermons'   : sermons,
+                    'total'     : sermons.size(),
                     'categories': searchService.categories()
             ]
             return
         }
 
         if (params.search) {
+            def sermons = searchService.search(params.search)
             render view: 'index', model: [
-                    'sermons'   : searchService.search(params.search),
+                    'sermons'   : sermons,
+                    'total'     : sermons.count(),
                     'categories': searchService.categories()
             ]
             return
         }
 
         render view: 'index', model: [
-                'sermons'   : searchService.all(),
+                'sermons'   : searchService.all(params),
+                'total'     : Sermons.count(),
                 'categories': searchService.categories()
         ]
     }

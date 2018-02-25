@@ -5,8 +5,8 @@ import grails.transaction.Transactional
 @Transactional
 class SearchService {
 
-    def all() {
-        return Sermons.list()
+    def all(params) {
+        return Sermons.list(params)
     }
 
     def categories() {

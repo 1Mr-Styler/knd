@@ -16,21 +16,26 @@ class SlidersController {
             return
         }
 
+        def slider = Sliders.findOrSaveWhere(id: params.long('pos'))
+
+        slider.title = params.title
+        slider.body = params.body
+        slider.btn = params.btn
+        slider.btnlink = params.btnlink
+        slider.hasLink = !(slider.btnlink == '#' || slider.btnlink.empty)
+
         if (params.bg) {
             def bg = params.bg as CommonsMultipartFile
             new FileOutputStream(
                     "/apps/knd/grails-app/assets/images/bg/${bg.originalFilename}")
                     .leftShift(params.bg.getInputStream())
 
-            def slider = Sliders.findOrSaveWhere(id: params.long('pos'))
-
-            slider.title = params.title
-            slider.body = params.body
             slider.bg = bg.originalFilename
-            slider.btn = params.btn
-            slider.save(flush: true)
+        } else slider.bg = ""
 
-        }
+
+
+        slider.save(flush: true)
 
         flash.message = "Added Slide!"
         render view: 'index'

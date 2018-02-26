@@ -37,7 +37,7 @@
                                     class="glyphicon glyphicon-list-alt"></span> <br/>Create</a>
                             <a href="#" class="btn btn-warning btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-bookmark"></span> <br/>Edit</a>
-                            <a href="#" class="btn btn-info btn-lg" role="button" style="font-size: 14px"><span
+                            <a href="#" class="btn btn-info btn-lg" role="button" style="font-size: 14px" onclick="alert('You cant delete a slider, you can only replace an existing one.')"><span
                                     class="glyphicon glyphicon-signal"></span> <br/>Delete</a>
                             <a href="${createLink(controller: 'staff')}" class="btn btn-success btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-comment"></span> <br/>Menu</a>
@@ -93,6 +93,17 @@
 
                         <div class="col-md-5">
                             <input id="btn" name="btn" placeholder="Button label text"
+                                   class="form-control input-md" required="" type="text" autocomplete="off">
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="btnlink">Button Link</label>
+
+                        <div class="col-md-5">
+                            <input id="btnlink" name="btnlink" placeholder="/downloads/1" value="#"
                                    class="form-control input-md" required="" type="text" autocomplete="off">
 
                         </div>

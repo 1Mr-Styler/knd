@@ -6,7 +6,10 @@ class Sliders {
     String body
     String bg
     String btn
+    String btnlink
+    Boolean hasLink = false
 
     static constraints = {
+        btnlink nullable: true
     }
 }

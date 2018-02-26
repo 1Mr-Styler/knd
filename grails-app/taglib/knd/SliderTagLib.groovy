@@ -17,8 +17,10 @@ class SliderTagLib {
                     <h3>${datA[0].title}</h3>
                     <p class="lead">${datA[0].body}</p>
                     <p>
-                    <a class="btn btn-lg btn-primary" href="#" role="button">
-                    ${datA[0].btn} &rarr;</a></p>
+                    ${
+            (datA[0].hasLink) ? "<p><a class=\"btn btn-lg btn-primary\" href=\"${datA[0].btnlink}\" role=\"button\">" +
+                    "                    ${datA[0].btn}</a></p>": ""
+        }
                 </div>
             </div>
         </div>
@@ -27,7 +29,11 @@ class SliderTagLib {
                 <div class="carousel-caption">
                     <h2>${datA[1].title}</h2>
                     <p class="lead">${datA[1].body}</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">${datA[1].btn} &rarr;</a></p>
+
+${
+            (datA[1].hasLink) ? "<p><a class=\"btn btn-lg btn-primary\" href=\"${datA[1].btnlink}\" role=\"button\">" +
+                    "                    ${datA[1].btn}</a></p>" : ""
+        }
                 </div>
             </div>
         </div>
@@ -36,8 +42,10 @@ class SliderTagLib {
                 <div class="carousel-caption">
                     <h2>${datA[2].title}</h2>
                     <p class="lead">${datA[2].body}</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">${datA[2].btn}
-                    &rarr;</a></p>
+                    ${
+            (datA[2].hasLink) ? "<p><a class=\"btn btn-lg btn-primary\" href=\"${datA[2].btnlink}\" role=\"button\">" +
+                    "                    ${datA[2].btn}</a></p>": ""
+        }
                 </div>
             </div>
         </div>

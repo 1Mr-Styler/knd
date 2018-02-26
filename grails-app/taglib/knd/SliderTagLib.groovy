@@ -17,7 +17,7 @@ class SliderTagLib {
                     <h3>${datA[0].title}</h3>
                     <p class="lead">${datA[0].body}</p>
                     <p>
-                    <a class="btn btn-lg btn-primary" href="charity-donation.html" role="button">
+                    <a class="btn btn-lg btn-primary" href="#" role="button">
                     ${datA[0].btn} &rarr;</a></p>
                 </div>
             </div>
@@ -27,7 +27,7 @@ class SliderTagLib {
                 <div class="carousel-caption">
                     <h2>${datA[1].title}</h2>
                     <p class="lead">${datA[1].body}</p>
-                    <p><a class="btn btn-lg btn-primary" href="ministry.html" role="button">${datA[1].btn} &rarr;</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">${datA[1].btn} &rarr;</a></p>
                 </div>
             </div>
         </div>

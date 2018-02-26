@@ -35,9 +35,12 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                %{--<li class="active">
+                <li>
                     <a href="${createLink(uri: '/')}">HOME</a>
-                </li>--}%
+                </li>
+                <li>
+                    <a href="${createLink(controller: 'search')}">Sermons</a>
+                </li>
                 <li><a></a>&nbsp;</li>
                 <li>
                     <form action="${createLink(controller: 'search')}"

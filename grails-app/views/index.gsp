@@ -27,9 +27,7 @@
 
 <div class="highlight-bg has-margin-bottom">
     <div class="container event-cta">
-        <div class="ec-txt">
-            <p style="text-transform: uppercase; margin-left: 46%">Welcome To Koinonia Sermons</p>
-        </div>
+        <p style="text-transform: uppercase;" class="text-center">Welcome To Koinonia Sermons</p>
     </div>
 </div>
 
@@ -42,8 +40,14 @@
 
             <div class="row">
 
-                <div class="col-md-8 col-sm-8 bulletin">
-                    <a class="twitter-timeline"
+                <div class="col-md-8 col-sm-5 bulletin hidden-md hidden-lg">
+                    <a class="twitter-timeline hidden-md" data-width="400" data-height="500"
+                       href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
+                        async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                <div class="col-md-8 col-sm-5 bulletin hidden-sm hidden-xs">
+                    <a class="twitter-timeline" data-height="500"
                        href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
                         async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
@@ -51,16 +55,16 @@
         </div>
 
 
-            <div class="col-md-3">
-                <div class="well">
-                    <div class="section-title">
-                        <h4>RECENT SERMONS</h4>
-                    </div>
-
-                    <sermon:latest/>
+        <div class="col-md-3">
+            <div class="well">
+                <div class="section-title">
+                    <h4>RECENT SERMONS</h4>
                 </div>
+
+                <sermon:latest/>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>

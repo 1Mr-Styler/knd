@@ -6,8 +6,8 @@ import grails.transaction.Transactional
 class BulletinService {
 
     def getLatest() {
-        def s = Bulletin.executeQuery("from Sermons s ORDER BY s.date desc", [max: 4])
+        def b = Bulletin.executeQuery("from Bulletin b ORDER BY b.date desc", [max: 4])
 
-        return s
+        return b
     }
 }

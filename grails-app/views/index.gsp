@@ -1,6 +1,6 @@
 <%@ page import="knd.SlidersService" %>
 <%
-    def slivice = grailsApplication.classLoader.loadClass('knd.SlidersService').newInstance()
+//    def slivice = grailsApplication.classLoader.loadClass('knd.SlidersService').newInstance()
 %>
 <!DOCTYPE html>
 <html>
@@ -33,6 +33,17 @@
 
 <div class="container has-margin-bottom">
     <div class="row">
+        <div class="col-md-3">
+            <div class="well">
+                <div class="section-title">
+                    <h4>RECENT SERMONS</h4>
+                </div>
+
+                <sermon:latest/>
+            </div>
+        </div>
+
+
         <div class="col-md-9 has-margin-bottom">
             <div class="section-title left-align-desktop">
                 <h4>LATEST TWEETS</h4>
@@ -55,15 +66,7 @@
         </div>
 
 
-        <div class="col-md-3">
-            <div class="well">
-                <div class="section-title">
-                    <h4>RECENT SERMONS</h4>
-                </div>
 
-                <sermon:latest/>
-            </div>
-        </div>
     </div>
 </div>
 </body>

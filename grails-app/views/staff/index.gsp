@@ -35,7 +35,7 @@
                                     class="glyphicon glyphicon-list-alt"></span> <br/>Sliders</a>
                             <a href="${createLink(controller: 'sermons')}" class="btn btn-warning btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-bookmark"></span> <br/>Sermons</a>
-                            <a href="#" class="btn btn-info btn-lg" role="button" style="font-size: 14px"><span
+                            <a href="${createLink(action: 'bulletin')}" class="btn btn-info btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-signal"></span> <br/>Bulletins</a>
                             <a href="#" class="btn btn-success btn-lg" role="button" style="font-size: 14px"><span
                                     class="glyphicon glyphicon-comment"></span> <br/>Gallery</a>

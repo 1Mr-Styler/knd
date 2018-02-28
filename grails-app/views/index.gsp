@@ -46,22 +46,22 @@
 
         <div class="col-md-9 has-margin-bottom">
             <div class="section-title left-align-desktop">
-                <h4>LATEST TWEETS</h4>
+                <h4>LATEST BULLETIN</h4>
             </div>
 
             <div class="row">
+                <div class="col-md-4 col-sm-4"><img class="img-responsive center-block" src="${assetPath(src: 'blog-thumb-2.jpg')}"
+                                                    alt="bulletin blog"></div>
 
-                <div class="col-md-8 col-sm-5 bulletin hidden-md hidden-lg">
-                    <a class="twitter-timeline hidden-md" data-width="400" data-height="500"
-                       href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
-                        async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+                <div class="col-md-8 col-sm-8 bulletin">
+                    <h4 class="media-heading">Lord is Sufficient for all of our needs</h4>
 
-                <div class="col-md-8 col-sm-5 bulletin hidden-sm hidden-xs">
-                    <a class="twitter-timeline" data-height="500"
-                       href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
-                        async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+                    <p>on 17th June 2014 by <a href="index.html#" class="link-reverse">Jose Mathew</a></p>
+
+                    <p class="media-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+                    egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris
+                    quam. Lorem ipsum dolor sit amet...</p>
+                    <a class="btn btn-primary" href="#" role="button">Read Article →</a></div>
             </div>
         </div>
 

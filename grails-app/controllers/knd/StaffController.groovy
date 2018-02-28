@@ -98,7 +98,7 @@ class StaffController {
 
         def bg = params.bg as CommonsMultipartFile
         new FileOutputStream( // TODO: change to prod server
-                "/Users/styl3r/IdeaProjects/KND/grails-app/assets/images/bg/${bg.originalFilename}")
+                "/apps/knd/grails-app/assets/images/bg/${bg.originalFilename}")
                 .leftShift(params.bg.getInputStream())
 
         def bull = new Bulletin(
@@ -130,7 +130,7 @@ class StaffController {
 
         if (bulletin != null) {
             flash.message = "Deleted " + bulletin.title
-            new File('/Users/styl3r/IdeaProjects/KND/grails-app/assets/images/bg/' + bulletin.bg).delete()
+            new File('/apps/knd/grails-app/assets/images/bg/' + bulletin.bg).delete()
             bulletin.delete(flush: true)
         } else {
             flash.message = "Invalid ID"

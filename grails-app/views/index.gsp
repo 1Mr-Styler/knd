@@ -7,6 +7,7 @@
 <head>
     <meta name="layout" content="main"/>
     <title><g:message code="eni.site.title"/>: Home</title>
+    <g:slidersBG/>
 </head>
 
 <body>

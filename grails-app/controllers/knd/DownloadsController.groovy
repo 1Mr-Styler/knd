@@ -18,7 +18,13 @@ class DownloadsController {
                     d.lastDownload = new Date()
                     d.save(flush: true)
 
-                    render file: fileToDownload, filename: fileToDownload.name, contentType: "application/octet-stream"
+//                    render file: fileToDownload, filename: fileToDownload.name, contentType: "application/octet-stream"
+
+                    response.setContentType("application/octet-stream")
+                    response.setHeader("Content-disposition", "attachment;filename=\"${fileToDownload.name}\"")
+                    response.outputStream << fileToDownload.bytes
+                    return
+
                 } else render "Error!" // appropriate error handling
 
             }

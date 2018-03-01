@@ -105,7 +105,8 @@
                         <img src="${assetPath(src: 'fb-icon.png')}" alt="social"></a>
                     <a href="https://twitter.com/koinonia_eni" target="_blank">
                         <img src="${assetPath(src: 'tw-icon.png')}" alt="social"></a>
-                    <a href="#"><img src="${assetPath(src: 'in-icon.png')}" alt="social"></a>
+                    <a href="http://mixlr.com/koinonia-radio/" target="_blank">
+                        <img src="${assetPath(src: 'icon-mx.png')}" alt="social"></a>
                 </div>
             </div>
         </div>

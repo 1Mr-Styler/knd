@@ -1,5 +1,7 @@
 package knd
 
+import org.springframework.web.multipart.commons.CommonsMultipartFile
+
 
 class StaffController {
 
@@ -74,6 +76,67 @@ class StaffController {
             flash.message = "Saving Failed!"
 
         render(view: 'newAdmin')
+
+    }
+
+    def bulletin() {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+            return
+        }
+
+        render view: 'bulletinIndex'
+    }
+
+    def bulletinSave() {
+
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+            return
+        }
+
+
+        def bg = params.bg as CommonsMultipartFile
+        new FileOutputStream( // TODO: change to prod server
+                "/apps/knd/grails-app/assets/images/bg/${bg.originalFilename}")
+                .leftShift(params.bg.getInputStream())
+
+        def bull = new Bulletin(
+                title: params.title,
+                message: params.desc,
+                author: params.author,
+                bg: bg.originalFilename,
+        )
+
+
+        flash.message = bull.save(flush: true) ? "Added Bulletin!" : "Failed. Try again."
+
+        render view: 'bulletinIndex'
+
+    }
+
+    def bulletinList() {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+        }
+
+        render(view: 'bulletinList', model: [bulletins: Bulletin.list(params)])
+    }
+
+    def bulletinDelete(Bulletin bulletin) {
+        if (session['user'] == null) {
+            redirect(controller: 'staff', action: 'login')
+        }
+
+        if (bulletin != null) {
+            flash.message = "Deleted " + bulletin.title
+            new File('/apps/knd/grails-app/assets/images/bg/' + bulletin.bg).delete()
+            bulletin.delete(flush: true)
+        } else {
+            flash.message = "Invalid ID"
+        }
+
+        render(view: 'bulletinList', model: [bulletins: Bulletin.list(params)])
 
     }
 }

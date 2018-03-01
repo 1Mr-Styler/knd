@@ -7,6 +7,7 @@
 <head>
     <meta name="layout" content="main"/>
     <title><g:message code="eni.site.title"/>: Home</title>
+    <g:slidersBG/>
 </head>
 
 <body>
@@ -44,28 +45,34 @@
         </div>
 
 
-        <div class="col-md-9 has-margin-bottom">
+        <div class="col-md-6 has-margin-bottom">
+            <div class="section-title left-align-desktop">
+                <h4>LATEST BULLETIN</h4>
+            </div>
+
+            <bulletin:latest/>
+        </div>
+
+        <div class="col-md-3 has-margin-bottom">
             <div class="section-title left-align-desktop">
                 <h4>LATEST TWEETS</h4>
             </div>
 
             <div class="row">
 
-                <div class="col-md-8 col-sm-5 bulletin hidden-md hidden-lg">
+                <div class="bulletin hidden-md hidden-lg">
                     <a class="twitter-timeline hidden-md" data-width="400" data-height="500"
                        href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
                         async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
 
-                <div class="col-md-8 col-sm-5 bulletin hidden-sm hidden-xs">
+                <div class="bulletin hidden-sm hidden-xs">
                     <a class="twitter-timeline" data-height="500"
                        href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
                         async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
-
-
 
     </div>
 </div>

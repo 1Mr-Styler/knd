@@ -53,4 +53,27 @@ ${
 """
     }
 
+    def slidersBG = {
+        def datA = slidersService.load()
+
+        out << """
+<style type="text/css">
+        .slide-one {
+    background: url("${assetPath(src: "bg/${datA[0].bg}")}") no-repeat;
+    background-size: cover;
+}
+
+.slide-two {
+    background: url("${assetPath(src: "bg/${datA[1].bg}")}") no-repeat;
+    background-size: cover;
+}
+
+.slide-three {
+    background: url("${assetPath(src: "bg/${datA[2].bg}")}") no-repeat;
+    background-size: cover;
+}
+</style>
+"""
+    }
+
 }

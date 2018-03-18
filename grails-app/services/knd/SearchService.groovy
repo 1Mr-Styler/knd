@@ -6,7 +6,8 @@ import grails.transaction.Transactional
 class SearchService {
 
     def all(params) {
-        return Sermons.list(params)
+        def res = Sermons.executeQuery("SELECT s FROM Sermons s ORDER BY date DESC", [], params)
+        return res
     }
 
     def categories() {

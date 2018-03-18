@@ -100,4 +100,28 @@ class SermonsController {
 
         render(view: 'index')
     }
+
+    def f5k() {
+        def newdate = new Date().parse("dd/MM/yy", params.datec)
+
+
+        def audio = params.audio
+
+        def sermon = new Sermons(
+                title: params.title,
+                note: params.desc,
+                length: params.length,
+                author: params.author,
+                date: newdate,
+                fname: audio,
+                category: params.cat,
+        )
+
+
+        if(sermon.save(flush: true)) {
+            respond "Done"
+        } else {
+            respond "cant"
+        }
+    }
 }

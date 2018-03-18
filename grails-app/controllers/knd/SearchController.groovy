@@ -21,7 +21,7 @@ class SearchController {
             def sermons = searchService.search(params.search)
             render view: 'index', model: [
                     'sermons'   : sermons,
-                    'total'     : sermons.count(),
+                    'total'     : sermons.size(),
                     'categories': searchService.categories()
             ]
             return

@@ -11,7 +11,7 @@ class SearchService {
     }
 
     def categories() {
-        def cats = Sermons.executeQuery("SELECT DISTINCT s.category FROM Sermons s")
+        def cats = Sermons.executeQuery("SELECT DISTINCT s.category FROM Sermons s ORDER BY s.category ASC")
 
         def counts = new LinkedHashMap<String, Long>()
 

@@ -6,6 +6,8 @@ class SearchController {
 
     def index() {
         searchService.categories()
+        params.offset = params.offset?: 0
+        params.max = params.max?: 10
 
         if (params.category) {
             def sermons = searchService.categories(params.category)

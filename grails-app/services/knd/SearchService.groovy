@@ -1,6 +1,7 @@
 package knd
 
 import grails.transaction.Transactional
+import org.codehaus.groovy.grails.web.servlet.mvc.GrailsParameterMap
 
 @Transactional
 class SearchService {
@@ -23,9 +24,10 @@ class SearchService {
         return counts
     }
 
-    def categories(String cat) {
-        def res = Sermons.executeQuery("FROM Sermons s WHERE s.category='${cat}'")
-        return res
+    def categories(String cat, GrailsParameterMap params) {
+        def res = Sermons.executeQuery("FROM Sermons s WHERE s.category='${cat}'", [], params)
+        def total = Sermons.executeQuery("SELECT count(*) FROM Sermons s WHERE s.category='${cat}'")
+        return [result: res, total: total.unique()[0]]
     }
 
     def search(String query) {

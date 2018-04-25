@@ -10,10 +10,10 @@ class SearchController {
         params.max = params.max?: 10
 
         if (params.category) {
-            def sermons = searchService.categories(params.category)
+            def sermons = searchService.categories(params.category, params)
             render view: 'index', model: [
-                    'sermons'   : sermons,
-                    'total'     : sermons.size(),
+                    'sermons'   : sermons.result,
+                    'total'     : sermons.total,
                     'categories': searchService.categories()
             ]
             return

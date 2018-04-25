@@ -37,7 +37,7 @@ class SermonsController {
         ).save(flush: true)
 
 
-        flash.message = "Added Slide!"
+        flash.message = "Sermon Uploaded!"
         render view: 'index'
     }
 

@@ -19,12 +19,9 @@ class SermonsController {
         }
 
         def newdate = new Date().parse("dd/MM/yyyy", params.datec)
+        println(params.dump())
 
-
-        def audio = params.audio as CommonsMultipartFile
-        new FileOutputStream(
-                "/apps/contents/audio/${audio.originalFilename}")
-                .leftShift(params.audio.getInputStream())
+        def audio = params.audio
 
         def sermon = new Sermons(
                 title: params.title,
@@ -32,12 +29,25 @@ class SermonsController {
                 length: params.length,
                 author: params.author,
                 date: newdate,
-                fname: audio.originalFilename,
+                fname: audio,
                 category: params.cat,
-        ).save(flush: true)
+        )
+
+        if (sermon.save(flush: true)) {
+            flash.message = "Sermon Uploaded!"
+
+            def proc = "find /apps/contents/audio -mindepth 2 -type f -print -exec mv {}  /apps/contents/audio ;".execute()
+            def b = new StringBuffer()
+            proc.consumeProcessErrorStream(b)
+
+            println proc.text
+            println b.toString()
+        } else {
+            flash.message = "Error, couldn't save data."
+            println("Errors: ${sermon.errors}")
+        }
 
 
-        flash.message = "Sermon Uploaded!"
         render view: 'index'
     }
 
@@ -118,10 +128,11 @@ class SermonsController {
         )
 
 
-        if(sermon.save(flush: true)) {
+        if (sermon.save(flush: true)) {
             respond "Done"
         } else {
             respond "cant"
         }
     }
+
 }

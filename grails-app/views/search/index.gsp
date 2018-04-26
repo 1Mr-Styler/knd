@@ -98,7 +98,7 @@
 
         <div class="col-md-3">
             <div class="vertical-links has-margin-xs-bottom">
-                <h4>Categories</h4>
+                <h4>Year</h4>
                 <ol class="list-unstyled">
                     <g:each in="${categories}" var="category">
                         <li><a href="?category=${category.key}">

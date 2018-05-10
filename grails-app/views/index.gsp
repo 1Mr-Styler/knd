@@ -1,122 +1,80 @@
+<%@ page import="knd.SlidersService" %>
+<%
+//    def slivice = grailsApplication.classLoader.loadClass('knd.SlidersService').newInstance()
+%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
+<head>
+    <meta name="layout" content="main"/>
+    <title><g:message code="eni.site.title"/>: Home</title>
+    <g:slidersBG/>
+</head>
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
+<body>
+<div id="myCarousel" class="carousel slide hidden-sm hidden-xs" data-ride="carousel">
 
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <g:main/>
+    <a class="left carousel-control" href="index.html#myCarousel" role="button" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
+                                                                    href="index.html#myCarousel" role="button"
+                                                                    data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
 
-			#status li {
-				line-height: 1.3;
-			}
+<div class="highlight-bg has-margin-bottom">
+    <div class="container event-cta">
+        <p style="text-transform: uppercase;" class="text-center">Welcome To Koinonia Sermons</p>
+    </div>
+</div>
 
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
+<div class="container has-margin-bottom">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="well">
+                <div class="section-title">
+                    <h4>RECENT SERMONS</h4>
+                </div>
 
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
+                <sermon:latest/>
+            </div>
+        </div>
 
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
 
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
+        <div class="col-md-6 has-margin-bottom">
+            <div class="section-title left-align-desktop">
+                <h4>LATEST BULLETIN</h4>
+            </div>
 
-			#controller-list ul {
-				list-style-position: inside;
-			}
+            <bulletin:latest/>
+        </div>
 
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
+        <div class="col-md-3 has-margin-bottom">
+            <div class="section-title left-align-desktop">
+                <h4>LATEST TWEETS</h4>
+            </div>
 
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
+            <div class="row">
 
-				#page-body {
-					margin: 0 1em 1em;
-				}
+                <div class="bulletin hidden-md hidden-lg">
+                    <a class="twitter-timeline hidden-md" data-width="400" data-height="500"
+                       href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
+                        async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
 
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+                <div class="bulletin hidden-sm hidden-xs">
+                    <a class="twitter-timeline" data-height="500"
+                       href="https://twitter.com/koinonia_eni?ref_src=twsrc%5Etfw">Tweets by koinonia_eni</a> <script
+                        async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
 
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</body>
+    </div>
+</div>
+</body>
 </html>
